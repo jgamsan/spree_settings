@@ -1,8 +1,7 @@
 Spree::Core::Engine.routes.prepend do
-  namespace :spree do
-    get "settings/index"
-  end
- 
+  
+  get "settings/index"
+   
   match "/setting_parameters/:id" => 'settings#set_parameter', :as => :setting_parameters
   # Add your extension routes here
 end
