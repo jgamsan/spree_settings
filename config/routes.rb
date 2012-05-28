@@ -1,9 +1,7 @@
-Spree::Core::Engine.routes.draw do
+Spree::Core::Engine.routes.prepend do
   get "settings/index"
 
   get "settings/new"
-  #get '/:retailer_type_id' => 'retailers#index', :as => :retailer_type
-  get "/:setting_id" => "settings#set", :as => :setting_parameters
-  
+  match "/setting_parameters/:id" => 'settings#set_parameter', :as => :setting_parameters
   # Add your extension routes here
 end

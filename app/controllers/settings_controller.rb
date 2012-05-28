@@ -6,7 +6,7 @@ class SettingsController < ApplicationController
     
   end
   
-  def set
+  def set_parameter
     session[:idioma] = "es"
   end
 end
