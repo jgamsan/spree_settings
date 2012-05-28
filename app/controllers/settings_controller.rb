@@ -3,6 +3,10 @@ class SettingsController < ApplicationController
   end
 
   def new
+    
+  end
+  
+  def set
     session[:idioma] = "es"
   end
 end
