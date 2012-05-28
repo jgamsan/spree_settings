@@ -4,6 +4,6 @@
 <%= link_to 'Volver', spree.products_url %>
 
 <ul class="list">
-  <li><%= link_to "Spain", {:controller => "settings", :action => "set", :id => "es"} %></li>
-  <li><%= link_to image_tag('France.png'), {:controller => "settings", :action => "set", :id => "fr"}  %></li>
+  <li><%= link_to "Spain", setting_parameters("es") %></li>
+  <li><%= link_to image_tag('France.png'), setting_parameters("fr") %></li>
 </ul>
