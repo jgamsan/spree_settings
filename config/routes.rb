@@ -3,6 +3,6 @@ Spree::Core::Engine.routes.append do
 
   get "settings/new"
   
-  match 'settings/:id' => 'settings#set'
+  match 'settings/:id' => 'settings#set', :as => :setting_parameters
   # Add your extension routes here
 end
