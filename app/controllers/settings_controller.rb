@@ -1,4 +1,4 @@
-class SettingsController < ApplicationController
+class Spree::SettingsController < Spree::BaseController
   def index
   end
 
