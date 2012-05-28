@@ -1,4 +1,4 @@
-Spree::Core::Engine.routes.draw do
+Spree::Core::Engine.routes.append do
   get "settings/index"
 
   get "settings/new"
