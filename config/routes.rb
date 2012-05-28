@@ -2,7 +2,8 @@ Spree::Core::Engine.routes.append do
   get "settings/index"
 
   get "settings/new"
-  match "settings/set/:id" => "settings#set"
+  #get '/:retailer_type_id' => 'retailers#index', :as => :retailer_type
+  get "/:setting_id" => "settings#set", :as => :setting_parameters
   
   # Add your extension routes here
 end
