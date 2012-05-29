@@ -4,7 +4,7 @@ Spree::BaseController.class_eval do
 
   def myapp_force_get_settings
     if session[:idioma].nil?
-      redirect_to settings_url
+      redirect_to settings_path
     end
   end 
   
