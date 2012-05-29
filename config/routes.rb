@@ -1,6 +1,8 @@
-Spree::Core::Engine.routes.prepend do
+Spree::Core::Engine.routes.draw do
   
-  get "spree/settings/index"
+  resources :settings,
+    :controller => 'settings',
+    :only => [:index]
    
   match "/setting_parameters/:id" => 'spree/settings#set_parameter', :as => :setting_parameters
   # Add your extension routes here
