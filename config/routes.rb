@@ -4,6 +4,6 @@ Spree::Core::Engine.routes.draw do
     :controller => 'settings',
     :only => [:index]
    
-  match "/setting_parameters/:id" => 'spree/settings#set_parameter', :as => :setting_parameters
+  match "/setting_parameters/:id" => 'settings#set_parameter', :as => :setting_parameters
   # Add your extension routes here
 end
