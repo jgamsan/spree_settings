@@ -1,5 +1,5 @@
 class Spree::SettingsController < Spree::BaseController
-  
+  layout 'application'
   def index
     
   end
