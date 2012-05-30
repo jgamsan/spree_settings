@@ -2,7 +2,7 @@ Spree::Core::Engine.routes.draw do
   
   resources :settings,
     :controller => 'settings',
-    :only => [:index] do
+    :only => [:index, :new] do
     member do
       get 'set_parameter'
     end
