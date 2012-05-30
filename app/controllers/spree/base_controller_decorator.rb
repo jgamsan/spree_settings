@@ -3,7 +3,9 @@ Spree::BaseController.class_eval do
   before_filter :myapp_force_get_settings
 
   def myapp_force_get_settings
-    render 'spree/settings/index'
+    if session[:idioma].nil?
+      render 'spree/settings/index'
+    end
   end 
   
 end
