@@ -4,7 +4,7 @@ Spree::BaseController.class_eval do
 
   protected
   def myapp_force_get_settings
-    render 'spree/settings/set_parameter'
+    render 'spree/settings/new'
   end 
   
 end
