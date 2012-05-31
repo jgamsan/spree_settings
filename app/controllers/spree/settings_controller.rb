@@ -10,6 +10,8 @@ class Spree::SettingsController < Spree::BaseController
 
   def set_parameter
     session[:idioma] = params[:id]
-    redirect_to products_url
+    respond_to do |format|
+      format.html { redirect_to root_url }
+    end
   end
 end
