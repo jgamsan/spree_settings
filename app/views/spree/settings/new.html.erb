@@ -1,9 +1,12 @@
-<h1>Settings#index</h1>
-<p>Find me in app/views/settings/index.html.erb</p>
+<% content_for :main do -%>
+  <h1>Settings#index</h1>
+  <p>Find me in app/views/settings/index.html.erb</p>
 
-<%= link_to 'Volver', spree.products_url %>
+  <%= link_to 'Volver', spree.products_url %>
 
-<ul class="list">
-  <li><%= link_to "Spain", set_parameter_setting_path("es") %></li>
-  <li><%= link_to image_tag('France.png'), set_parameter_setting_path("fr") %></li>
-</ul>
+  <ul class="list">
+    <li><%= link_to "Spain", set_parameter_setting_path("es") %></li>
+    <li><%= link_to image_tag('France.png'), set_parameter_setting_path("fr") %></li>
+  </ul>
+<% end -%>
+

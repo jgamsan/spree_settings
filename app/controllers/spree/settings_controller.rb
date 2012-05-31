@@ -1,5 +1,5 @@
 class Spree::SettingsController < Spree::BaseController
-  layout 'initial'
+  layout 'spree/layouts/initial'
   def index
     
   end
