@@ -4,7 +4,7 @@ Spree::BaseController.class_eval do
 
   protected
   def myapp_force_get_settings
-    redirect_to spree.products_url
+    redirect_to new_setting_url
   end 
   
 end
