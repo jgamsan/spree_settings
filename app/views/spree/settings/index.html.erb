@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <% Spree::Setting::FLAGS_LIST_2.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
+      <td><%= link_to image_tag(item, :size => "50x50"), set_flag_setting_url("es") %></td>
     <% end -%>
     <td colspan=2><h6>Entrega 48 Horas</h6></td>
   </tr>
