@@ -11,7 +11,8 @@
   
 
 <ul class="flag">
-  <li><%= image_tag('France.png', :size => "50x50") %></li>
-  <li><%= image_tag('Spain.png', :size => "50x50") %></li>
+  <% Spree::Setting::FLAGS_LIST_1.each do |item| -%>
+    <li><%= image_tag(item, :size => "50x50") %></li>
+  <% end -%>
 </ul>
 
