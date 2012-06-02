@@ -4,5 +4,5 @@ Spree::Core::Engine.routes.draw do
       get 'set_flag'
     end
   end
-  match 'set-initial' => 'settings#new', :as => :set_initial
+  match 'set-initial' => 'settings#set_flag', :as => :set_initial
 end
