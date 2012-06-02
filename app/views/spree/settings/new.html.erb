@@ -10,27 +10,26 @@
 
 <h1>Configuracion Aplicacion</h1>
 
-<ul class="flag">
-  <% Spree::Setting::FLAGS_LIST_1.each do |item| -%>
-    <li><%= image_tag(item, :size => "50x50") %></li>
+<table class="">
+  <tr>
+    <% Spree::Setting::FLAGS_LIST_1.each do |item| -%>
+    <td><%= image_tag(item, :size => "50x50") %></td>
   <% end -%>
-</ul>
-</br>
-<ul class="flag">
-  <% Spree::Setting::FLAGS_LIST_2.each do |item| -%>
-    <li><%= image_tag(item, :size => "50x50") %></li>
+  </tr>
+  <tr>
+    <% Spree::Setting::FLAGS_LIST_2.each do |item| -%>
+    <td><%= image_tag(item, :size => "50x50") %></td>
   <% end -%>
-</ul>
-</br>
-<ul class="flag">
-  <% Spree::Setting::FLAGS_LIST_3.each do |item| -%>
-    <li><%= image_tag(item, :size => "50x50") %></li>
+  </tr>
+  <tr>
+    <% Spree::Setting::FLAGS_LIST_3.each do |item| -%>
+    <td><%= image_tag(item, :size => "50x50") %></td>
   <% end -%>
-</ul>
-</br>
-<ul class="flag">
-  <% Spree::Setting::FLAGS_LIST_4.each do |item| -%>
-    <li><%= image_tag(item, :size => "50x50") %></li>
+  </tr>
+  <tr>
+    <% Spree::Setting::FLAGS_LIST_4.each do |item| -%>
+    <td><%= image_tag(item, :size => "50x50") %></td>
   <% end -%>
-</ul>
+  </tr>
+</table>
 
