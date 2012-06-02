@@ -1,8 +1,9 @@
 module Spree
   class Setting
     attr_accessor :flag
-    FLAGS_LIST_1 = %w[Austria.png Belgium.png BosniaHerzegovina.png CzechRepublic.png Denmark.png Spain.png Finland.png Germany.png]
-    FLAGS_LIST_2 = %w[Hungary.png Ireland.png Italy.png France.png Luxembourg.png Nederland.png Norway.png Poland.png]
-    FLAGS_LIST_3 = %w[Portugal.png Slovakia.png Slovenia.png Sweden.png Switzerland.png Croatia.png Serbia.png UnitedKingdom.png]
+    FLAGS_LIST_1 = %w[Spain.png Portugal.png Germany.png Austria.png Belgium.png Nederland.png Luxembourg.png]
+    FLAGS_LIST_2 = %w[Denmark.png Switzerland.png Liechtenstein.png CzechRepublic.png France.png Monaco.png UnitedKingdom.png Italy.png Slovenia.png]
+    FLAGS_LIST_3 = %w[Sweden.png Ireland.png Poland.png Slovakia.png Hungary.png]
+    FLAGS_LIST_4 = %w[Norway.png Finland.png Estonia.png Latvia.png Lithuania.png BosniaHerzegovina.png Croatia.png Serbia.png Bulgaria.png Romania.png]
   end
 end
