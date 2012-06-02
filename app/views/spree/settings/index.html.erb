@@ -13,7 +13,7 @@
 <table class="">
   <tr>
     <% Spree::Setting::FLAGS_LIST_1.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
+      <td><%= link_to image_tag(item, :size => "50x50"), set_flag_setting_url("en") %></td>
     <% end -%>
     <td colspan=2><h6>Entrega 24 Horas</h6></td>
   </tr>
@@ -25,13 +25,13 @@
   </tr>
   <tr>
     <% Spree::Setting::FLAGS_LIST_3.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
+      <td><%= link_to image_tag(item, :size => "50x50"), set_flag_setting_url("en") %></td>
     <% end -%>
     <td colspan=2><h6>Entrega 2-4 dias</h6></td>
   </tr>
   <tr>
     <% Spree::Setting::FLAGS_LIST_4.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
+      <td><%= link_to image_tag(item, :size => "50x50"), set_flag_setting_url("en") %></td>
     <% end -%>
     <td colspan=2><h6>Entrega 3-4 dias</h6></td>
   </tr>
