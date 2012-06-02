@@ -12,7 +12,7 @@
 
 <ul class="flag">
   <% Spree::Setting::FLAGS_LIST_1.each do |item| -%>
-    <li><%= image_tag(item.gsub(%r["], ''), :size => "50x50") %></li>
+    <li><%= image_tag(item, :size => "50x50") %></li>
   <% end -%>
 </ul>
 
