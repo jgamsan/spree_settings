@@ -1,4 +1,14 @@
-<% content_for :main do -%>
+<% content_for :sidebar do %>
+  <% if "products" == @current_controller && @taxon %>
+    <%= render :partial => "spree/shared/filters" %>
+  <% else %>
+    <%= render :partial => "spree/shared/taxonomies" %>
+  <% end %>
+<% end %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @setting } %>
+<% content_for :sidebar do -%>
+  
+  
   <h1>Settings#index</h1>
   <p>Find me in app/views/settings/index.html.erb</p>
 

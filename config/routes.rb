@@ -1,9 +1,7 @@
 Spree::Core::Engine.routes.draw do
-  
-  resources :settings do
-    member do
-      get 'set_parameter'
-    end
-  end
+  resources :settings,
+    :controller => 'settings',
+    :only       => [:new, :create]
+  match 'set-initial' => 'settings#new', :as => :set_initial
    
 end

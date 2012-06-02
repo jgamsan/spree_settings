@@ -3,9 +3,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_settings'
   s.version     = '1.1.1'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
-  s.required_ruby_version = '>= 1.8.7'
+  s.summary     = 'New extension for handle initial configurations in spree'
+  s.description = 'New extension for handle initial configurations in spree'
+  s.required_ruby_version = '>= 1.9.2'
 
   s.author    = 'Jose Miguel Gamazo'
   s.email     = 'miguel.gamazo@galiclick.com'
