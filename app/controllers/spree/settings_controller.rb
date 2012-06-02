@@ -7,4 +7,8 @@ class Spree::SettingsController < Spree::BaseController
   def create
     
   end
+  
+  def set_flag
+    
+  end
 end
