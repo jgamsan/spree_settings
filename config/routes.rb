@@ -1,5 +1,5 @@
 Spree::Core::Engine.routes.draw do
-  resources :settings, :controller => 'settings', :only => [:new, :create] do
+  resources :settings, :controller => 'settings', :only => [:new, :create, :index] do
     member do
       get 'set_flag'
     end
