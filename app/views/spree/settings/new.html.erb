@@ -37,7 +37,7 @@
   </tr>
 </table>
 <h1><%= t('.contact_us') %></h1>
-<%= form_for @setting, :url => spree_settings_path do |f| %>
+<%= form_for @setting, :url => settings_path do |f| %>
   <p>
     <%= f.label :Ancho %>
     <%= f.collection_select(:ancho, Spree::TireWidth.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
