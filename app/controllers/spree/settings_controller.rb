@@ -5,7 +5,7 @@ class Spree::SettingsController < Spree::BaseController
   end
 
   def create
-    
+    @setting = Spree::Setting.new(params[:setting])
   end
   
   def set_flag
