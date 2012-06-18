@@ -1,0 +1,20 @@
+<% content_for :sidebar do %>
+  <% if "products" == @current_controller && @taxon %>
+    <%= render :partial => "spree/shared/filters" %>
+  <% else %>
+    <%= render :partial => "spree/shared/taxonomies" %>
+  <% end %>
+<% end %>
+<%= form_for @paperline, :url => news_path do |f| %>
+  <p>
+    <%= f.label :Title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :Body %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit') %>
+  </p>
+<% end %>

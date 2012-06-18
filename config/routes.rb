@@ -1,4 +1,8 @@
 Spree::Core::Engine.routes.draw do
+  resources :news,
+    :controller => "news",
+    :only => [:new, :create]
+  match 'new-us' => 'news#new', :as => :new_us
   resources :settings,
     :controller => 'settings',
     :only => [:new, :create]
