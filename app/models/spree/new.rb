@@ -1,5 +1,6 @@
 module Spree
   class New
-    attr_accessible :title, :body
+    attr_accessor :title, :body
+    
   end
 end
