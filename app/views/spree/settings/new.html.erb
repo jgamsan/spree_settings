@@ -31,7 +31,7 @@
   <p>
     <ul class="list">
       <% for flag in 1..7 -%>
-        <li><%= f.submit_flags %></li>
+        <li><%= f.submit t('.submit'), :id => flag, :type => :image, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
       <% end -%>
       <li><h6>Entrega 24 Horas</h6></li>
     </ul>
