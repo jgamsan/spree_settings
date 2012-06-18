@@ -29,7 +29,7 @@
     <%= f.collection_select(:tttl, Spree::TireTttl.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
   </p>
   <p>
-    <ul>
+    <ul style="float:left;">
       <% for flag in 0..6 -%>
         <li style="display:inline;float:left;"><%= f.submit t('.submit'), :id => flag, :type => :image, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
       <% end -%>
