@@ -36,7 +36,7 @@
     <td colspan=2><h6>Entrega 3-4 dias</h6></td>
   </tr>
 </table>
-<h1><%= t('.') %></h1>
+<h1><%= t('.what_need') %></h1>
 <%= form_for @valor, :url => settings_path do |f| %>
   <p>
     <%= f.label :Ancho %>
@@ -57,7 +57,7 @@
     <%= f.collection_select(:tttl, Spree::TireTttl.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
   </p>
   <p>
-    <%= f.submit t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit'), :src => "/images/Spain.png" %>
+    <%= f.submit t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit'), :type => :image, :src => "/images/comment-button.png" %>
   </p>
 <% end %>
 
