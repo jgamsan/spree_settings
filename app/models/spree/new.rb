@@ -1,3 +1,5 @@
-class Spree::New < ActiveRecord::Base
-  attr_accessible :title, :body
+module Spree
+  class New
+    attr_accessible :title, :body
+  end
 end
