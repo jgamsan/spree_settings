@@ -6,3 +6,8 @@ ul.flag li {
   display: inline;
   float: left;
 }
+.spain {
+  background: url(image_path("spain.png"));
+  width: 40px;
+  height: 30px;
+}
