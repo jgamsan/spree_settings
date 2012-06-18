@@ -1,4 +1,4 @@
-class Spree::NewsController < ApplicationController
+class Spree::NewsController < Spree::BaseController
   def new
     @paperline = Spree::New.new
   end
