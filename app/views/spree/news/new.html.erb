@@ -5,7 +5,7 @@
     <%= render :partial => "spree/shared/taxonomies" %>
   <% end %>
 <% end %>
-<%= form_for @paperline, :url => news_index_path do |f| %>
+<%= form_for @paperline, :url => news_index_url do |f| %>
   <p>
     <%= f.label :Title %>
     <%= f.text_field :title %>
