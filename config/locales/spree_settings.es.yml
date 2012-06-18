@@ -3,3 +3,5 @@ es:
     settings:
       notices:
         success: "Cambiado Idioma Satisfactoriamente."
+      new:
+        submit: "Enviar"
