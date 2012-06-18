@@ -37,4 +37,37 @@
   </tr>
 </table>
 <h1><%= t('.contact_us') %></h1>
+<%= form_for @valor, :url => settings_path do |f| %>
+  <p>
+    <%= f.label :Ancho %>
+    <%= f.collection_select(:ancho, Spree::TireWidth.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+  </p>
+  <p>
+    <%= f.label :Perfil %>
+    <%= f.collection_select(:perfil, Spree::TireProfile.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+  </p>
+  <p>
+    <%= f.label :Llanta %>
+    <%= f.collection_select(:llanta, Spree::TireInnertube.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+  </p>
+  <p>
+    <%= f.label :IC %>
+    <%= f.collection_select(:ic, Spree::TireIc.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+  </p>
+  <p>
+    <%= f.label :Velocidad %>
+    <%= f.collection_select(:velocidad, Spree::TireSpeedCode.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+  </p>
+  <p>
+    <%= f.label :FR %>
+    <%= f.collection_select(:fr, Spree::TireFr.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+  </p>
+  <p>
+    <%= f.label :TTTL %>
+    <%= f.collection_select(:tttl, Spree::TireTttl.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+  </p>
+  <p>
+    <%= f.submit t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit') %>
+  </p>
+<% end %>
 

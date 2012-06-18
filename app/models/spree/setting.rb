@@ -1,5 +1,7 @@
 module Spree
   class Setting
+    include ActiveModel::Conversion
+    include ActiveModel::Validations
     attr_accessor :flag, :ancho, :perfil, :llanta, :velocidad, :ic, :fr, :tttl 
     
     FLAGS_LIST_1 = %w[Spain.png Portugal.png Germany.png Austria.png Belgium.png Nederland.png Luxembourg.png]
