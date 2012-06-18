@@ -4,10 +4,10 @@ module Spree
     include ActiveModel::Validations
     attr_accessor :flag, :ancho, :perfil, :llanta, :velocidad, :ic, :fr, :tttl 
     
-    FLAGS_LIST_1 = %w[Spain.png Portugal.png Germany.png Austria.png Belgium.png Nederland.png Luxembourg.png]
-    FLAGS_LIST_2 = %w[Denmark.png Switzerland.png Liechtenstein.png CzechRepublic.png France.png Monaco.png UnitedKingdom.png Italy.png Slovenia.png]
-    FLAGS_LIST_3 = %w[Sweden.png Ireland.png Poland.png Slovakia.png Hungary.png]
-    FLAGS_LIST_4 = %w[Norway.png Finland.png Estonia.png latvia.png Lithuania.png BosniaHerzegovina.png Croatia.png Serbia.png Bulgaria.png Romania.png]
+    FLAGS_LIST = Hash[1, Spain.png, 2, Portugal.png, 3, Germany.png, 4, Austria.png, 5, Belgium.png, 6, Nederland.png, 7, Luxembourg.png,
+    8, Denmark.png, 9, Switzerland.png, 10, Liechtenstein.png, 11, CzechRepublic.png, 12, France.png 13, Monaco.png, 14, UnitedKingdom.png, 15, Italy.png, 16, Slovenia.png,
+    17, Sweden.png, 18, Ireland.png, 19, Poland.png, 20, Slovakia.png, 21, Hungary.png,
+    22, Norway.png, 23, Finland.png, 24, Estonia.png, 25, latvia.png, 26, Lithuania.png, 27, BosniaHerzegovina.png, 28, Croatia.png, 29, Serbia.png, 30, Bulgaria.png, 31, Romania.png]
     
     def persisted?
       false

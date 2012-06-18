@@ -8,34 +8,6 @@
 
 <%#= render :partial => 'spree/shared/error_messages', :locals => { :target => @setting } %>
 
-<h1>Configuracion Aplicacion</h1>
-
-<table class="">
-  <tr>
-    <% Spree::Setting::FLAGS_LIST_1.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
-    <% end -%>
-    <td colspan=2><h6>Entrega 24 Horas</h6></td>
-  </tr>
-  <tr>
-    <% Spree::Setting::FLAGS_LIST_2.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
-    <% end -%>
-    <td colspan=2><h6>Entrega 48 Horas</h6></td>
-  </tr>
-  <tr>
-    <% Spree::Setting::FLAGS_LIST_3.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
-    <% end -%>
-    <td colspan=2><h6>Entrega 2-4 dias</h6></td>
-  </tr>
-  <tr>
-    <% Spree::Setting::FLAGS_LIST_4.each do |item| -%>
-      <td><%= image_tag(item, :size => "50x50") %></td>
-    <% end -%>
-    <td colspan=2><h6>Entrega 3-4 dias</h6></td>
-  </tr>
-</table>
 <h1><%= t('.what_need') %></h1>
 <%= form_for @valor, :url => settings_path do |f| %>
   <p>
@@ -57,7 +29,12 @@
     <%= f.collection_select(:tttl, Spree::TireTttl.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
   </p>
   <p>
-    <%= f.submit t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit'), :type => :image, :src => "/assets/Spain.png", :height => "30", :width => "40" %>
+    <ul class="list">
+      <% for flag in 1..7 -%>
+        <li><%= f.submit_flags %></li>
+      <% end -%>
+      <li><h6>Entrega 24 Horas</h6></li>
+    </ul>
   </p>
 <% end %>
 
