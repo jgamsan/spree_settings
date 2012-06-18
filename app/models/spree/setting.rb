@@ -7,11 +7,6 @@ module Spree
     FLAGS_LIST_3 = %w[Sweden.png Ireland.png Poland.png Slovakia.png Hungary.png]
     FLAGS_LIST_4 = %w[Norway.png Finland.png Estonia.png latvia.png Lithuania.png BosniaHerzegovina.png Croatia.png Serbia.png Bulgaria.png Romania.png]
   
-    def initialize(attributes = {})
-      attributes.each do |key, value|
-        self.send("#{key}=", value)
-      end
-    end
   
   end
 end

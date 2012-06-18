@@ -1,11 +1,11 @@
 class Spree::SettingsController < Spree::BaseController
  
   def new
-    @setting = Spree::Setting.new
+    @valor = Spree::Setting.new
   end
 
   def create
-    @setting = Spree::Setting.new(params[:setting])
+    @valor = Spree::Setting.new(params[:setting])
   end
   
   def set_flag
