@@ -6,7 +6,7 @@ class Spree::SettingsController < Spree::BaseController
 
   def create
     @valor = Spree::Setting.new(params[:setting])
-    case params[:commit]
+    
   end
   
   def set_flag
