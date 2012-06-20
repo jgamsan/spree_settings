@@ -1,5 +1,5 @@
 class Spree::SettingsController < Spree::BaseController
- 
+
   def new
     @valor = Spree::Setting.new
   end
@@ -17,7 +17,7 @@ class Spree::SettingsController < Spree::BaseController
     end
     @products = Spree::Product.where(:tire_speed_code_id => 5)
     #redirect_to("/products", :notice => t('spree.settings.notices.success'))
-    render "shared/products", :products => @products, :taxon => @taxon
+    render "spree/shared/products", :products => @products, :taxon => @taxon
   end
   
   def set_flag
