@@ -15,7 +15,9 @@ class Spree::SettingsController < Spree::BaseController
       when "11"
         session[:locale] = "fr"
     end
-    @products = Spree::Product.joins(:variants_including_master).where("spree_variants.tire_speed_code_id = ?", 7)
+    #@products = Spree::Product.joins(:variants_including_master).where("spree_variants.tire_speed_code_id = ?", 7)
+    @searcher = Spree::Config.searcher_class.new(:tire_speed_code_id => 7)
+    @products = @searcher.retrieve_products
     #redirect_to("/products", :notice => t('spree.settings.notices.success'))
     render :partial => "spree/shared/products", :products => @products, :taxon => @taxon
   end
