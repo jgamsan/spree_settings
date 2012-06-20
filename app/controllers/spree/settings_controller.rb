@@ -5,7 +5,7 @@ class Spree::SettingsController < Spree::BaseController
   end
 
   def create
-    #@valor = Spree::Setting.new(params[:setting])
+    @velocidad = params[:setting][:velocidad]
     prueba = params.select{|k,v| k =~ /.x/}
     case prueba.keys.first.chop.chop
       when "0"
