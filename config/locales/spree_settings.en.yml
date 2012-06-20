@@ -6,3 +6,5 @@ en:
     settings:
       notices:
         success: "Locale changed successfully."
+      new:
+        what_need: "What Need?"

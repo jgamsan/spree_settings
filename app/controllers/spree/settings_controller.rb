@@ -7,7 +7,7 @@ class Spree::SettingsController < Spree::BaseController
   def create
     #@valor = Spree::Setting.new(params[:setting])
     prueba = params.select{|k,v| k =~ /.x/}
-    case prueba.values.first
+    case prueba.keys.first
       when "0"
         session[:locale] = "es"
       when "1"
