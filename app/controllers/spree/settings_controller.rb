@@ -5,7 +5,7 @@ class Spree::SettingsController < Spree::BaseController
   end
 
   def create
-    @valor = Spree::Setting.new(params[:setting])
+    #@valor = Spree::Setting.new(params[:setting])
     #@prueba = params.select{|k,v| k =~ /.x/}
     redirect_to('/', :notice => t('spree.settings.notices.success'))
   end
