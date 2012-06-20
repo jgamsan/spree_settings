@@ -7,6 +7,9 @@ class Spree::SettingsController < Spree::BaseController
   def create
     #@valor = Spree::Setting.new(params[:setting])
     #@prueba = params.select{|k,v| k =~ /.x/}
+    if params[:commit] == "0"
+      session[:locale] = "es"
+    end
     redirect_to('/', :notice => t('spree.settings.notices.success'))
   end
   
