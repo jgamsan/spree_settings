@@ -7,11 +7,13 @@ class Spree::SettingsController < Spree::BaseController
   def create
     #@valor = Spree::Setting.new(params[:setting])
     prueba = params.select{|k,v| k =~ /.x/}
-    case prueba.keys.first[0]
+    case prueba.keys.first.chop.chop
       when "0"
         session[:locale] = "es"
       when "1"
         session[:locale] = "en"
+      when "11"
+        session[:locale] = "fr"
     end
     redirect_to('/', :notice => t('spree.settings.notices.success'))
   end
