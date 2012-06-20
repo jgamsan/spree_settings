@@ -1,5 +1,5 @@
 class Spree::SettingsController < Spree::BaseController
-
+  respond_to :html
   def new
     @valor = Spree::Setting.new
   end
