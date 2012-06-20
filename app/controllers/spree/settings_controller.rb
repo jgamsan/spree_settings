@@ -15,7 +15,9 @@ class Spree::SettingsController < Spree::BaseController
       when "11"
         session[:locale] = "fr"
     end
-    redirect_to(spree_products_path, :notice => t('spree.settings.notices.success'))
+    @products = Product.with_speed
+    #redirect_to("/products", :notice => t('spree.settings.notices.success'))
+    render "shared/products", :products => @products, :taxon => @taxon
   end
   
   def set_flag
