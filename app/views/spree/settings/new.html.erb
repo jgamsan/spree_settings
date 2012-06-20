@@ -38,21 +38,21 @@
     <br/>
     <ul>
       <% for flag in 7..15 -%>
-        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
+        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :name => flag, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
       <% end -%>
       <li><h6>Entrega 48 Horas</h6></li>
     </ul>
     <br/>
     <ul>
       <% for flag in 16..20 -%>
-        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
+        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :name => flag, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
       <% end -%>
       <li><h6>Entrega 2-4 dias</h6></li>
     </ul>
     <br/>
     <ul>
       <% for flag in 21..30 -%>
-        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
+        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :name => flag, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
       <% end -%>
       <li><h6>Entrega 3-4 dias</h6></li>
     </ul>
