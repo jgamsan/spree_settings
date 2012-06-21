@@ -30,7 +30,7 @@ class Spree::SettingsController < Spree::BaseController
   end
   
   def index
-    @velocidad = params[:setting][:velocidad]
+    @velocidad = params[:velocidad]
     prueba = params.select{|k,v| k =~ /.x/}
     case prueba.keys.first.chop.chop
       when "0"
