@@ -42,4 +42,11 @@
                               @tttls.map {|t| [t.name, t.id]},
                             @tttl ? @tttl.id : params[:tire_tttl_id]) %>
   </p>
+  
+  <ul style="display:block;">
+      <% for flag in 0..6 -%>
+        <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40")  %></li>
+      <% end -%>
+      <li><h6>Entrega 24 Horas</h6></li>
+    </ul>
 <% end -%>
