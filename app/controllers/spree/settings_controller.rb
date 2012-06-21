@@ -19,7 +19,7 @@ class Spree::SettingsController < Spree::BaseController
     @searcher = Spree::Config.searcher_class.new(:tire_speed_code_id => 7)
     @products = @searcher.retrieve_products
     #redirect_to("/products", :notice => t('spree.settings.notices.success'))
-    render :partial => "spree/shared/products", :products => @products, :taxon => @taxon
+    render :partial => "spree/shared/products", :locals => { :products => @products, :taxon => @taxon }
     #respond_with(@products)
   end
   
