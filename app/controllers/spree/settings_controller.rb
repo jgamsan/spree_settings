@@ -1,5 +1,5 @@
 class Spree::SettingsController < Spree::BaseController
-  respond_to :html
+ 
   def new
     @valor = Spree::Setting.new
   end
@@ -19,8 +19,7 @@ class Spree::SettingsController < Spree::BaseController
     @searcher = Spree::Config.searcher_class.new(:tire_speed_code_id => 7)
     @products = @searcher.retrieve_products
     #redirect_to("/products", :notice => t('spree.settings.notices.success'))
-    #render :partial => "spree/shared/products", :locals => { :products => @products, :taxon => @taxon }
-    respond_with(@products)
+    render "spree/home/index", :products => @products, :taxon => @taxon 
   end
   
   def set_flag
