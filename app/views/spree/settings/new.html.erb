@@ -9,53 +9,11 @@
 <%#= render :partial => 'spree/shared/error_messages', :locals => { :target => @setting } %>
 
 <h1><%= t('.what_need') %></h1>
-<%= form_for @valor, :url => settings_path do |f| %>
+<% form_tag settings_path, :method => :get do -%>
   <p>
-    <%= f.label :Ancho %>
-    <%= f.collection_select(:ancho, Spree::TireWidth.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
-    <%= f.label :Perfil %>
-    <%= f.collection_select(:perfil, Spree::TireProfile.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
-    <%= f.label :Llanta %>
-    <%= f.collection_select(:llanta, Spree::TireInnertube.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
+    <%= label_tag :Ancho %>
+    <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
+                              @widths.map {|t| [t.name, t.id]},
+                            @width ? @width.id : params[:tire_width_id]) %>
   </p>
-  <p>
-    <%= f.label :IC %>
-    <%= f.collection_select(:ic, Spree::TireIc.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
-    <%= f.label :Velocidad %>
-    <%= f.collection_select(:velocidad, Spree::TireSpeedCode.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
-    <%= f.label :FR %>
-    <%= f.collection_select(:fr, Spree::TireFr.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
-    <%= f.label :TTTL %>
-    <%= f.collection_select(:tttl, Spree::TireTttl.all, :id, :name, { :include_blank => true }, { 'style' => 'width:80px' }) %>
-  </p>
-  <p>
-    <ul style="display:block;">
-      <% for flag in 0..6 -%>
-        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :name => flag, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
-      <% end -%>
-      <li><h6>Entrega 24 Horas</h6></li>
-    </ul>
-    <br/>
-    <ul>
-      <% for flag in 7..15 -%>
-        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :name => flag, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
-      <% end -%>
-      <li><h6>Entrega 48 Horas</h6></li>
-    </ul>
-    <br/>
-    <ul>
-      <% for flag in 16..20 -%>
-        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :name => flag, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
-      <% end -%>
-      <li><h6>Entrega 2-4 dias</h6></li>
-    </ul>
-    <br/>
-    <ul>
-      <% for flag in 21..30 -%>
-        <li style="display:inline;float:left;"><%= f.submit t('.submit'), :value => flag, :type => :image, :name => flag, :src => "/assets/#{Spree::Setting::FLAGS_LIST[flag]}", :height => "30", :width => "40" %></li>
-      <% end -%>
-      <li><h6>Entrega 3-4 dias</h6></li>
-    </ul>
-  </p>
-<% end %>
-
+<% end -%>
