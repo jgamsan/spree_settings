@@ -45,8 +45,26 @@
   
   <ul style="display:block;">
       <% for flag in 0..6 -%>
-        <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40")  %></li>
+        <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40", :name => flag)  %></li>
       <% end -%>
       <li><h6>Entrega 24 Horas</h6></li>
+    </ul>
+    <ul style="display:block;">
+      <% for flag in 7..15 -%>
+        <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40", :name => flag)  %></li>
+      <% end -%>
+      <li><h6>Entrega 48 Horas</h6></li>
+    </ul>
+    <ul style="display:block;">
+      <% for flag in 16..20 -%>
+        <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40", :name => flag)  %></li>
+      <% end -%>
+      <li><h6>Entrega 2-4 Dias</h6></li>
+    </ul>
+    <ul style="display:block;">
+      <% for flag in 21..30 -%>
+        <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40", :name => flag)  %></li>
+      <% end -%>
+      <li><h6>Entrega 3-4 Dias</h6></li>
     </ul>
 <% end -%>
