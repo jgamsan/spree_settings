@@ -30,7 +30,7 @@ class Spree::SettingsController < Spree::BaseController
   end
   
   def index
-    @velocidad = params[:velocidad]
+    #@velocidad = params[:velocidad]
     prueba = params.select{|k,v| k =~ /.x/}
     case prueba.keys.first.chop.chop
       when "0"
@@ -40,7 +40,7 @@ class Spree::SettingsController < Spree::BaseController
       when "11"
         session[:locale] = "fr"
     end
-    @searcher = Spree::Config.searcher_class.new(:tire_speed_code_id => 7)
+    @searcher = Spree::Config.searcher_class.new(params)
     @products = @searcher.retrieve_products
     render "spree/home/index", :products => @products, :taxon => @taxon
   end
