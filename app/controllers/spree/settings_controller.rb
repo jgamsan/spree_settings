@@ -1,7 +1,6 @@
 class Spree::SettingsController < Spree::BaseController
  
   def new
-    #@valor = Spree::Setting.new
     @widths = Spree::TireWidth.all
     @profiles = Spree::TireProfile.all
     @innertubes = Spree::TireInnertube.all

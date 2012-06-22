@@ -49,6 +49,7 @@
     <% end -%>
     <li><h6>Entrega 24 Horas</h6></li>
   </ul>
+  <br/>
   <ul>
     <% for flag in 7..15 -%>
       <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40", :name => flag)  %></li>
