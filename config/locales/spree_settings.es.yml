@@ -6,3 +6,10 @@ es:
       new:
         what_need: "Que Necesitas?"
         submit: "Enviar"
+        width: 'Ancho'
+        profile: 'Perfil'
+        innertube: 'Llanta'
+        speed_code: 'Codigo Velocidad'
+        ic: 'IC'
+        fr: 'FR'
+        tttl: 'TTTL'

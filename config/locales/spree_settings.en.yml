@@ -8,3 +8,11 @@ en:
         success: "Locale changed successfully."
       new:
         what_need: "What Need?"
+        submit: "Submit"
+        width: 'Width'
+        profile: 'Profile'
+        innertube: 'Innertube'
+        speed_code: 'Speed_code'
+        ic: 'IC'
+        fr: 'FR'
+        tttl: 'TTTL'
