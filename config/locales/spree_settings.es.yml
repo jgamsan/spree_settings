@@ -9,7 +9,7 @@ es:
         width: 'Ancho'
         profile: 'Perfil'
         innertube: 'Llanta'
-        speed_code: 'Codigo Velocidad'
+        speed_code: 'Velocidad'
         ic: 'IC'
         fr: 'FR'
         tttl: 'TTTL'
