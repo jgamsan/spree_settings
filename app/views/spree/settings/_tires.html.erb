@@ -1,0 +1,7 @@
+<%= simple_fields_for 'patient' do |f| %>
+  <% if !ideal_imc.blank? %>
+    <%= f.input :ideal_imc, :input_html => {:value => ideal_imc}, :label => "Indice Masa Corporal Ideal" %>
+  <% else %>
+    <%= f.input :ideal_imc, :input_html => {:value => @patient.ideal_imc}, :label => "Indice Masa Corporal Ideal" %>
+  <% end %>
+<% end %>
