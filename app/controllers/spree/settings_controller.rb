@@ -36,6 +36,7 @@ class Spree::SettingsController < Spree::BaseController
     speed_codes = tires.map {|x| x.tire_speed_code_id}.flatten.uniq
     frs = tires.map {|x| x.tire_fr_id}.flatten.uniq
     tttls = tires.map {|x| x.tire_tttl_id}.flatten.uniq
-    render :partial => "widths", :locals => { :tires => tires}
+    tires = [widths, profiles, innertubes, ics, speed_codes, frs, tttls]
+    render :partial => "tires", :locals => { :tires => tires}
   end
 end
