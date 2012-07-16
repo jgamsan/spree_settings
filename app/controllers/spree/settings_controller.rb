@@ -28,7 +28,7 @@ class Spree::SettingsController < Spree::BaseController
     sql = sql + " and tire_fr_id = #{params[:if]}" unless params[:if] == 0
     sql = sql + " and tire_tttl_id = #{params[:it]}" unless params[:it] == 0
     tires = Spree::Variant.find_by_sql("SELECT tire_width_id, tire_profile_id, tire_innertube_id, tire_ic_id, tire_speed_code_id, tire_fr_id, tire_tttl_id, is_master
-     FROM spree_variants where is_master = 't'" + sql + "group by tire_width_id, tire_profile_id, tire_innertube_id, tire_ic_id, tire_speed_code_id, tire_fr_id, tire_tttl_id, is_master;")
+     FROM spree_variants where is_master = 't'" + sql + " group by tire_width_id, tire_profile_id, tire_innertube_id, tire_ic_id, tire_speed_code_id, tire_fr_id, tire_tttl_id, is_master;")
     widths = tires.map {|x| x.tire_width_id}.flatten.uniq
     profiles = tires.map {|x| x.tire_profile_id}.flatten.uniq
     innertubes = tires.map {|x| x.tire_innertube_id}.flatten.uniq
