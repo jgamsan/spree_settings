@@ -7,5 +7,5 @@ Spree::Core::Engine.routes.draw do
     :controller => 'settings',
     :only => [:new, :create, :index]
   match 'set-initial' => 'settings#new', :as => :set_initial
-  match '/settings/update_tires_select/:iw/:ip/:ii/:ic/:is/:if/:it', :to => 'settings/#update_tires_select'
+  match '/update_tires_select/:iw/:ip/:ii/:ic/:is/:if/:it', :to => 'settings/#update_tires_select'
 end
