@@ -8,6 +8,7 @@ class Spree::SettingsController < Spree::BaseController
     @ics = Spree::TireIc.all
     @frs = Spree::TireFr.all
     @tttls = Spree::TireTttl.all
+    render :layout => 'spree/layouts/spree_application'
   end
   
   def index
