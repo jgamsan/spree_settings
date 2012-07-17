@@ -3,7 +3,7 @@
     <%= label_tag :Ancho %>
     <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
                               @widths.map {|t| [t.name, t.id]},
-                            @width ? @width.id : params[:tire_width_id]), {:id => "tire_width"} %>
+                            @width ? @width.id : params[:tire_width_id]) %>
     <%= label_tag :Perfil %>
     <%= select_tag :tire_profile_id, options_for_select([[t(:profile), '']] +
                               @profiles.map {|t| [t.name, t.id]},
@@ -35,7 +35,7 @@
   <p>
     <%= label_tag :Ancho %>
     <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
-                              Spree::TireWidth.find(tires[0]).map {|t| [t.name, t.id]}), {:id => "tire_width"} %>
+                              Spree::TireWidth.find(tires[0]).map {|t| [t.name, t.id]}) %>
     <%= label_tag :Perfil %>
     <%= select_tag :tire_profile_id, options_for_select([[t(:profile), '']] +
                               Spree::TireProfile.find(tires[1]).map {|t| [t.name, t.id]}) %>
