@@ -46,6 +46,10 @@ class Spree::SettingsController < Spree::BaseController
     @speed = params[:is] || 0
     @fr = params[:if] || 0
     @tttl = params[:it] || 0
-    render :partial => "tires", :locals => { :tires => tires}
+    if session[:tires].nil?
+      render :partial => "tires", :locals => { :tires => tires}
+    else
+      render :partial => "spree/shared/search_tires", :locals => { :tires => tires}
+    end
   end
 end
