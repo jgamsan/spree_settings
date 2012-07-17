@@ -35,33 +35,26 @@
   <p>
     <%= label_tag :Ancho %>
     <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
-                              Spree::TireWidth.find(tires[0]).map {|t| [t.name, t.id]},
-                            @width ? @width.id : params[:tire_width_id]) %>
+                              Spree::TireWidth.find(tires[0]).map {|t| [t.name, t.id]}) %>
     <%= label_tag :Perfil %>
     <%= select_tag :tire_profile_id, options_for_select([[t(:profile), '']] +
-                              Sprre::TireProfile.find(tires[1]).map {|t| [t.name, t.id]},
-                            @profile ? @profile.id : params[:tire_profile_id]) %>
+                              Sprre::TireProfile.find(tires[1]).map {|t| [t.name, t.id]}) %>
     <%= label_tag :Llanta %>
     <%= select_tag :tire_innertube_id, options_for_select([[t(:innertube), '']] +
-                              Spree::TireInnertube.find(tires[2]).map {|t| [t.name, t.id]},
-                            @innertube ? @innertube.id : params[:tire_innertube_id]) %>                        
+                              Spree::TireInnertube.find(tires[2]).map {|t| [t.name, t.id]}) %>                        
   </p>
   <p>
     <%= label_tag :IC %>
     <%= select_tag :tire_ic_id, options_for_select([[t(:ic), '']] +
-                              Spree::TireIc.find(tires[3]).map {|t| [t.name, t.id]},
-                            @ic ? @ic.id : params[:tire_ic_id]) %>
+                              Spree::TireIc.find(tires[3]).map {|t| [t.name, t.id]}) %>
     <%= label_tag :Velocidad %>
     <%= select_tag :tire_speed_code_id, options_for_select([[t(:speed_code), '']] +
-                              Spree::TireSpeedCode.find(tires[4]).map {|t| [t.name, t.id]},
-                            @speed ? @speed.id : params[:tire_speed_code_id]) %>
+                              Spree::TireSpeedCode.find(tires[4]).map {|t| [t.name, t.id]}) %>
     <%= label_tag :FR %>
     <%= select_tag :tire_fr_id, options_for_select([[t(:fr), '']] +
-                              Spree::TireFr.find(tires[5]).map {|t| [t.name, t.id]},
-                            @fr ? @fr.id : params[:tire_fr_id]) %>
+                              Spree::TireFr.find(tires[5]).map {|t| [t.name, t.id]}) %>
     <%= label_tag :TTTL %>
     <%= select_tag :tire_tttl_id, options_for_select([[t(:tttl), '']] +
-                              Spree::TireTtttl.find(tires[6]).map {|t| [t.name, t.id]},
-                            @tttl ? @tttl.id : params[:tire_tttl_id]) %>
+                              Spree::TireTtttl.find(tires[6]).map {|t| [t.name, t.id]}) %>
   </p>
 <% end -%>
