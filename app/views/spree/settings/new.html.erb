@@ -1,7 +1,8 @@
 <h1><%= t('.what_need') %></h1>
 <%= form_tag settings_path, :method => :get do -%>
-  <%= render :partial => 'tires' %>
-  
+  <div id="tiresSettings">
+    <%= render :partial => 'tires' %>
+  </div>
   <ul style="display:block;">
     <% for flag in 0..6 -%>
       <li style="display:inline;float:left;"><%= image_submit_tag(Spree::Setting::FLAGS_LIST[flag], :height => "30", :width => "40", :name => flag)  %></li>
