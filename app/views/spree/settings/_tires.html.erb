@@ -55,6 +55,6 @@
                               Spree::TireFr.find(tires[5]).map {|t| [t.name, t.id]}) %>
     <%= label_tag :TTTL %>
     <%= select_tag :tire_tttl_id, options_for_select([[t(:tttl), '']] +
-                              Spree::TireTtttl.find(tires[6]).map {|t| [t.name, t.id]}) %>
+                              Spree::TireTttl.find(tires[6]).map {|t| [t.name, t.id]}) %>
   </p>
 <% end -%>
