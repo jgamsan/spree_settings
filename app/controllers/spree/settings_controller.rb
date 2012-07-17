@@ -49,7 +49,7 @@ class Spree::SettingsController < Spree::BaseController
     if session[:tires].nil?
       render :partial => "tires", :locals => { :tires => tires}
     else
-      render :partial => "spree/shared/search_tires", :locals => { :tires => tires}
+      render :partial => "spree/shared/search_tires", :locals => { :search_tires => tires}
     end
   end
 end
