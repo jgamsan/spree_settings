@@ -14,6 +14,7 @@ class Spree::SettingsController < Spree::BaseController
   def index
     prueba = params.select{|k,v| k =~ /.x/}
     session[:locale] = Spree::Setting::FLAGS_LIST_NEW[prueba.keys.first.chop.chop.to_i][3]
+    session[:tires] = true
     @searcher = Spree::Config.searcher_class.new(params)
     @products = @searcher.retrieve_products
     render "spree/home/index", :products => @products, :taxon => @taxon
